@@ -1,0 +1,54 @@
+.semaforo {
+  background-color: gray;
+  border: 2px solid black;
+  width: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rojo {
+  background-color: red;
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.amarillo {
+  background-color: yellow;
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.verde {
+  background-color: green;
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.gris {
+  background-color: gray;
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+
+}
+
+.contenedor-semaforos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}

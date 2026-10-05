@@ -1,0 +1,33 @@
+<div class="contenedor-semaforos">
+@for(i of [1,2,3,4,5];track i){
+
+  <div class="semaforo">
+
+    @if(contador()>=2){
+      <div class="rojo"></div>
+    }@else {
+      <div class="gris"></div>
+    }
+
+    @if(contador()==1){
+      <div class="circulo amarillo"></div>
+    }@else {
+      <div class="gris"></div>
+    }
+
+    @if(contador()<=0) {
+      <div class="verde"></div>
+    }@else {
+      <div class="gris"></div>
+    }
+  </div>
+}
+</div>
+
+<h1>{{contador()}}</h1>
+<button (click)="incrementar()">+1</button>
+<button (click)="decrementar()">-1</button>
+<button (click)="resetear()">Reset</button>
+
+
+
