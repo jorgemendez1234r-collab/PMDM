@@ -1,0 +1,14 @@
+<ul>
+    @for(fruta of frutas; track fruta){
+        <li>
+             <img class="fruta" [src]="fruta.imagen">
+            {{ fruta.nombre }}: 
+            @if(fruta.like){
+                👍
+            }
+        </li>
+    }
+
+
+
+</ul>

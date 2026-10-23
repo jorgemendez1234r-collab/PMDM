@@ -1,33 +1,34 @@
 <div class="contenedor-semaforos">
-@for(i of [1,2,3,4,5];track i){
+@for(i of repeticiones;track i){
 
-  <div class="semaforo">
 
-    @if(contador()>=2){
-      <div class="rojo"></div>
-    }@else {
-      <div class="gris"></div>
-    }
+    <div class="cajita">
 
-    @if(contador()==1){
-      <div class="circulo amarillo"></div>
-    }@else {
-      <div class="gris"></div>
-    }
-
-    @if(contador()<=0) {
-      <div class="verde"></div>
-    }@else {
-      <div class="gris"></div>
-    }
-  </div>
+        @if(contador()>=2){
+        <div class="circulo rojo"></div>
+        }@else {
+        <div class="circulo gris"></div>      
+        }
+        
+        
+        @if(contador()==1){
+        <div class="circulo naranja"></div>
+        }@else {
+        <div class="circulo gris"></div>     
+        }
+        
+        
+        @if(contador()==0) {
+        <div class="circulo verde"></div>
+        }@else {
+        <div class="circulo gris"></div>      
+        }
+    </div>
 }
 </div>
+<h1 [style.color]="colorin()"> {{ contador() }}</h1>
 
-<h1>{{contador()}}</h1>
-<button (click)="incrementar()">+1</button>
-<button (click)="decrementar()">-1</button>
-<button (click)="resetear()">Reset</button>
-
-
+<button matButton="elevated" (click)="incrementar()">+1</button>
+<button matButton="elevated" (click)="decrementar()">-1</button>
+<button matButton="elevated" (click)="resetear()">Reset</button>
 

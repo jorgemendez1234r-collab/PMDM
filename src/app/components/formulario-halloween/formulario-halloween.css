@@ -1,0 +1,44 @@
+.texto-error {
+    color: brown;
+    font-size: x-small;
+    margin-top: 2px;
+}
+
+.formulario {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+h1, h2 {
+    color: #ff6600;
+}
+
+input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}

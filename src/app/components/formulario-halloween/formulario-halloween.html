@@ -1,0 +1,26 @@
+<h1>Formulario de Halloween</h1>
+
+<form [formGroup]="formularioHalloween" (ngSubmit)="enviar()">
+  <div class="formulario">
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre">
+    @if(tieneError('nombre')){
+        <span class="texto-error">Pon el nombre bien hombre, de 3 a 50 caracteres.</span>
+    }
+
+    <label>Objeto:</label>
+    <input type="text" formControlName="objeto">
+    @if(tieneError('objeto')){
+        <span class="texto-error">Pon el objeto que es obligatorio anda, de 3 a 50 caracteres.</span>
+    }
+
+    <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
+  </div>
+</form>
+
+<h2>Lista de objetos de Halloween:</h2>
+<ol>
+  @for (item of listaObjetos; track $index) {
+    <li>{{ item }}</li>
+  }
+</ol>
