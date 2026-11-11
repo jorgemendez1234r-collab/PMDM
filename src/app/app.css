@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --navbar-bg: #f8f9fa;
+  --card-bg: #f1f3f5;
+}
+
+body.dark-mode {
+  --bg-color: #000000; 
+  --text-color: #ffffff; 
+  --navbar-bg: #121212; 
+  --card-bg: #1a1a1a;    
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark-mode app-root {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: block;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--text-color) !important;
+}

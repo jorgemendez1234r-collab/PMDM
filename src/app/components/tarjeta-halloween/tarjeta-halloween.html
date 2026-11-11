@@ -1,0 +1,16 @@
+<div class="tarjeta-halloween">
+  <div class="tarjeta-izquierda">
+    <img [src]="objetoItem.imagen" [alt]="objetoItem.objeto" class="imagen-objeto">
+  </div>
+  <div class="tarjeta-derecha">
+    <div class="info-superior">
+      <span class="nombre-objeto"><b>{{ objetoItem.objeto }}</b></span>
+    </div>
+    <div class="descripcion-objeto">
+      <p>{{ objetoItem.descripcion }}</p>
+    </div>
+    <div class="info-inferior">
+      <small>Propietario: {{ objetoItem.propietario }}</small>
+    </div>
+  </div>
+</div>
