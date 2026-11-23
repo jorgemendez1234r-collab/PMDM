@@ -1,35 +1,34 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #212529;
-  --navbar-bg: #f8f9fa;
-  --card-bg: #f1f3f5;
-}
-
-body.dark-mode {
-  --bg-color: #000000; 
-  --text-color: #ffffff; 
-  --navbar-bg: #121212; 
-  --card-bg: #1a1a1a;    
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-body.dark-mode app-root {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* El tema se aplica al contenedor de toda la aplicación.
+   Las variables se heredan en los componentes hijos. */
+:host {
   display: block;
+}
+
+.aplicacion {
+  --text-color: #222222;
+  --secondary-text: #555555;
+  --background-color: #ffffff;
+  --panel-color: #fff3e0;
+  --input-color: #ffffff;
+  --border-color: #cccccc;
+  --semaforo-bg: gray;
+  --calc-bg: gray;
+  background-color: var(--background-color);
+  color: var(--text-color);
   min-height: 100vh;
 }
 
-.navbar {
-  background-color: var(--navbar-bg) !important;
-  color: var(--text-color) !important;
+.aplicacion.dark-mode {
+  --text-color: #f3f4f6;
+  --secondary-text: #cbd5e1;
+  --background-color: #151a23;
+  --panel-color: #252d3a;
+  --input-color: #1f2937;
+  --border-color: #64748b;
+  --semaforo-bg: #414650;
+  --calc-bg: #414650;
+}
+
+.contenido {
+  padding: 20px;
 }

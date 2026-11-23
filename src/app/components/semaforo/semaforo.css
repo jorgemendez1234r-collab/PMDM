@@ -1,5 +1,5 @@
 .semaforo {
-  background-color: gray;
+  background-color: var(--semaforo-bg, gray);
   border: 2px solid black;
   width: 100px;
   padding: 10px;
@@ -51,4 +51,10 @@
   gap: 20px;
   align-items: center;
   margin-top: 20px;
+}
+button {
+  background-color: var(--input-color, #fff);
+  color: var(--text-color, #222);
+  border: 1px solid var(--border-color, #ccc);
+  cursor: pointer;
 }

@@ -1,15 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Semaforo } from './components/semaforo/semaforo';
-import { ListaFrutas } from './components/lista-frutas/lista-frutas';
 import { NavBar } from './components/nav-bar/nav-bar';
+import { ThemeService } from './services/theme';
 
 @Component({
-  imports: [RouterOutlet, Semaforo, ListaFrutas, NavBar],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [RouterOutlet, NavBar],
   templateUrl: './app.html',
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('Piruleta');
+  themeService = inject(ThemeService);
 }

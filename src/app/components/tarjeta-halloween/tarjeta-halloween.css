@@ -1,6 +1,6 @@
 .tarjeta-halloween {
   display: flex;
-  background-color: #fff3e0;
+  background-color: var(--panel-color, #fff3e0);
   border: 2px solid #ff6600;
   border-radius: 8px;
   padding: 12px;
@@ -30,17 +30,17 @@
 
 .nombre-objeto {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-color, #333);
 }
 
 .descripcion-objeto p {
   margin: 4px 0;
-  color: #555;
+  color: var(--secondary-text, #555);
   font-size: 0.95rem;
 }
 
 .info-inferior {
-  color: #777;
+  color: var(--secondary-text, #777);
   font-style: italic;
   font-size: 0.85rem;
   border-top: 1px dashed #ffcc80;

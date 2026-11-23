@@ -4,14 +4,9 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeService {
-  isDarkMode = signal<boolean>(false);
+  isDarkMode = signal(false);
 
   toggleTheme() {
-    this.isDarkMode.update(dark => !dark);
-    if (this.isDarkMode()) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
+    this.isDarkMode.update(oscuro => !oscuro);
   }
 }

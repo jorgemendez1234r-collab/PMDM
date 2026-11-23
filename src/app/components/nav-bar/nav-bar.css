@@ -1,12 +1,28 @@
-.navbar{
-    
+.navbar {
+  background-color: var(--panel-color, #eeeeee);
+  color: var(--text-color, #222222);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 64px;
+  padding: 8px 12px;
 }
-.opcion{
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
 
+.opcion {
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
 }
-.opcion:hover{
-     color: rgb(252, 51, 222);
+
+.opcion:hover {
+  color: rgb(252, 51, 222);
+}
+
+button {
+  background-color: var(--input-color, #ffffff);
+  color: var(--text-color, #222222);
+  border: 1px solid var(--border-color, #cccccc);
+  padding: 6px 10px;
+  cursor: pointer;
 }

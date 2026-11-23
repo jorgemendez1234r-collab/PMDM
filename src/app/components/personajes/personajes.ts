@@ -1,32 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-personajes',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './personajes.html',
   styleUrl: './personajes.css',
 })
 export class Personajes {
-  
-  personajes: Personaje[] = [
-    new Personaje('pepe', 'Es alto.', true, '/images/pepe.jpg'),
-    new Personaje('alberto', 'Es mediano.', false, '/images/alberto.jpg'),
-    new Personaje('hector', 'Es bajito.', true, '/images/hector.jpg')
+  personajes = [
+    { nombre: 'pepe', descripcion: 'Es alto.', like: true, imagen: '/images/pepe.jpg' },
+    { nombre: 'alberto', descripcion: 'Es mediano.', like: false, imagen: '/images/alberto.jpg' },
+    { nombre: 'hector', descripcion: 'Es bajito.', like: true, imagen: '/images/hector.jpg' }
   ];
-}
-
-class Personaje {
-  nombre: string;
-  descripcion: string;
-  like: boolean;
-  imagen: string;
-
-  constructor(n: string, d: string, l: boolean, i: string) {
-    this.nombre = n;
-    this.descripcion = d;
-    this.like = l;
-    this.imagen = i;
-  }
 }

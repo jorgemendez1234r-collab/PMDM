@@ -1,13 +1,11 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-halloween',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './tarjeta-halloween.html',
-  styleUrls: ['./tarjeta-halloween.css']
+  styleUrl: './tarjeta-halloween.css'
 })
 export class TarjetaHalloweenComponent {
-  @Input() objetoItem: any;
+  objetoItem = input({ imagen: '', objeto: '', descripcion: '', propietario: '' });
 }
