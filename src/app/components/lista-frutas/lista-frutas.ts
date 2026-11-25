@@ -12,7 +12,7 @@ export class ListaFrutas {
     { nombre: 'naranja', like: false, imagen: '/images/naranja.PNG' },
     { nombre: 'uvas', like: true, imagen: '/images/uvas.PNG' },
     { nombre: 'melón', like: false, imagen: '/images/melon.PNG' },
-    { nombre: 'pera', like: true, imagen: '/images/naranja.PNG' },
-    { nombre: 'fresas', like: false, imagen: '/images/naranja.PNG' }
+    { nombre: 'pera', like: false, imagen: '/images/pera.PNG' },
+    { nombre: 'fresas', like: true, imagen: '/images/fresas.PNG' }
   ];
 }

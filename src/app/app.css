@@ -1,5 +1,3 @@
-/* El tema se aplica al contenedor de toda la aplicación.
-   Las variables se heredan en los componentes hijos. */
 :host {
   display: block;
 }
@@ -30,5 +28,5 @@
 }
 
 .contenido {
-  padding: 20px;
+  padding: 10px;
 }

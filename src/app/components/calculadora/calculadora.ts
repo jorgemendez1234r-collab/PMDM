@@ -1,4 +1,4 @@
-import { Component, signal} from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,54 +7,59 @@ import { Component, signal} from '@angular/core';
   templateUrl: './calculadora.html',
 })
 export class Calculadora {
-  contador = signal(0);
-num = -1;
-  primerdigito(){
-   
-    
+  contador = signal('0');
+  num = 0;
+  operacion = '';
+  nuevo = true;
+
+  numero(n: number) {
+    if (this.nuevo) {
+      this.contador.set(String(n));
+      this.nuevo = false;
+    } else {
+      this.contador.set(this.contador() + n);
+    }
   }
 
-  uno(){
-    this.contador.set(1);
+  operar(op: string) {
+    this.num = Number(this.contador());
+    this.operacion = op;
+    this.nuevo = true;
   }
 
-  dos(){
-    this.contador.set(2);
+  igual() {
+    if (this.operacion == '') {
+      return;
+    }
+
+    let segundo = Number(this.contador());
+    let resultado = 0;
+
+    if (this.operacion == '+') {
+      resultado = this.num + segundo;
+    }
+
+    if (this.operacion == '-') {
+      resultado = this.num - segundo;
+    }
+
+    if (this.operacion == '*') {
+      resultado = this.num * segundo;
+    }
+
+    if (this.operacion == '/') {
+      resultado = this.num / segundo;
+    }
+
+    this.contador.set(String(resultado));
+    this.operacion = '';
+    this.nuevo = true;
   }
 
-  tres(){
-    this.contador.set(3);
+  borrar() {
+    this.contador.set('0');
+    this.num = 0;
+    this.operacion = '';
+    this.nuevo = true;
   }
-
-  cuatro(){
-    this.contador.set(4);
-  }
-
-  cinco(){
-    this.contador.set(5);
-  }
-
-  seis(){
-    this.contador.set(6);
-  }
-
-  siete(){
-    this.contador.set(7);
-  }
-
-  ocho(){
-    this.contador.set(8);
-  }
-
-  nueve(){
-    this.contador.set(9);
-  }
-
-  nada(){
-  
-  }
-
-
 }
-
-
